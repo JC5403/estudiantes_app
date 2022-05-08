@@ -34,7 +34,7 @@ class EstudianteController implements IController
   public function detail($id)
   {
     $sql = "SELECT * FROM estudaintes where id=" . $id;
-    $conexionDB = new ConexionDB();
+    $conexionDB= new ConexionDB();
     $resultQuery = $conexionDB->getResultQuery($sql);
     $estudiante= null;
     if ($resultQuery->num_rows > 0) {
@@ -54,11 +54,11 @@ class EstudianteController implements IController
   public function create($estudianteModel)
   {
     $sql = "inser into estudaintes (codigo, nombres, apellidos, edad)";
-    $sql .= "values ('". $estudianteModel->('codigo'). "',
+    $sql .= "values '". $estudianteModel->get('codigo'). "',
     '" . $estudianteModel->get('nombres') . "',
     '" . $estudianteModel->get('apellidos') . "',
      " . $estudianteModel->get('edad') . ")";
-     $conexionDB = ConexionDB ();
+     $conexionDB = new ConexionDB ();
      $resultQuery = $conexionDB->getResultQuery($sql);
      $conexionDB->close();
      return $resultQuery;
