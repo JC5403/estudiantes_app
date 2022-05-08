@@ -12,7 +12,7 @@ class EstudianteController implements IController
   {
     $sql = " select * from estudaintes ";
     $conexionDB = new ConexionDB();
-    $resultQuery = $conexion->getResultQuery($sql);
+    $resultQuery = $conexionDB->getResultQuery($sql);
     $estudiantes = [];
     if ($resultQuery->num_rows > 0) {
       while ($row = $resultQuery->fetch_assoc()) {
@@ -34,7 +34,7 @@ class EstudianteController implements IController
   public function detail($id)
   {
     $sql = "SELECT * FROM estudaintes where id=" . $id;
-    $conexion = new ConexionDB();
+    $conexionDB = new ConexionDB();
     $resultQuery = $conexionDB->getResultQuery($sql);
     $estudiante= null;
     if ($resultQuery->num_rows > 0) {
@@ -83,7 +83,7 @@ class EstudianteController implements IController
   {
     $sql = "delete from estudiantes where id=" .$id;
     $conexionDB = new ConexionDB();
-    $resultQuery = $conexionDB->getResultQuery($Sql);
+    $resultQuery = $conexionDB->getResultQuery($sql);
     $conexionDB->close();
     return $resultQuery;
   }
