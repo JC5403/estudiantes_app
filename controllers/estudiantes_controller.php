@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 namespace controllers;
 
 use controllers\IController;
@@ -7,7 +8,7 @@ use models\Estudiante;
 
 class EstudianteController implements IController
 {
-  public function list ()
+  public function list()
   {
     $sql = " select * from estudaintes ";
     $conexionDB = new ConexionDB();
@@ -15,20 +16,20 @@ class EstudianteController implements IController
     $estudiantes = [];
     if ($resultQuery->num_rows > 0) {
       while ($row = $resultQuery->fetch_assoc()) {
-      $estudiante = new Estudiante ();
-        $estudiante->set('id',$row['id']);
-        $estudiante->set('codigo',$row['codigo']);
-        $estudiante->set('nombres',$row['nombres']);
-        $estudiante->set('apellidos',$row['apellidos']);
-        $estudiante->set('edad',$row['edad']);
-        
+        $estudiante = new Estudiante();
+        $estudiante->set('id', $row['id']);
+        $estudiante->set('codigo', $row['codigo']);
+        $estudiante->set('nombres', $row['nombres']);
+        $estudiante->set('apellidos', $row['apellidos']);
+        $estudiante->set('edad', $row['edad']);
+
         array_push($estudiantes, $estudiante);
-      }      
+      }
     }
     $conexionDB->close();
     return $estudiantes;
   }
-  
+
   
   public function detail($id)
   {
@@ -86,5 +87,6 @@ class EstudianteController implements IController
     $conexionDB->close();
     return $resultQuery;
   }
-  
+
+
 }
