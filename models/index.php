@@ -22,7 +22,7 @@ $estudianteController = new EstudianteController ();
         <thead>
             <tr>
                 <th>Código</th>
-                <th>Estudainte</th>
+                <th>Estudiante</th>
                 <th>Edad</th>
                 <th>Modificar</th>
                 <th>Eliminar</th>
