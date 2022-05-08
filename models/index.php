@@ -41,7 +41,7 @@ $estudianteController = new EstudianteController ();
                      echo '<td>';
                      echo  '<a href= "form_estudiantes.php?idE='. $estudiante->get('id') . '">Eliminar</a>';
                      echo '</td>';
-                     echo '</tr>'
+                     echo '</tr>';
                  }
              } else{
                  echo '<tr>';
