@@ -14,7 +14,7 @@ class ConexionDB {
 
     public function __construct()
     {       
-        $this->conn = new mysqli ($this->servidorDB,$this->nombreDB,$this->usuarioDB,$this->passwordDB);
+        $this->conn = new mysqli ($this->servidorDB,$this->usuarioDB,$this->passwordDB,$this->nombreDB);
     }
 
     public function getResultQuery($sql)
