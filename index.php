@@ -18,6 +18,8 @@ $estudianteController = new EstudianteController ();
 <body>
     <h1>Lista de estudiantes</h1>
     <a href="form_estudiantes.php">Registrar nuevo estudiante</a>
+    <br>
+    <a href="index2.0.php">Listado de materias</a>
     <table>
         <thead>
             <tr>
