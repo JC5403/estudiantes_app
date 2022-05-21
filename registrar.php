@@ -8,7 +8,7 @@ require_once dirname(__DIR__) . '/estudiantes_app/controllers/estudiantes_contro
 
 
 use controllers\EstudianteController;
-use models\Estudiante;
+use models\estudiante;
 
 $estudianteController = new EstudianteController();
 
