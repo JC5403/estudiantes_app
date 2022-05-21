@@ -10,7 +10,7 @@ class EstudianteController implements IController
 {
   public function list()
   {
-    $sql = " select * from estudaintes ";
+    $sql = " select * from estudiantes ";
     $conexionDB = new ConexionDB();
     $resultQuery = $conexionDB->getResultQuery($sql);
     $estudiantes = [];
