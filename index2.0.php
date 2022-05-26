@@ -24,7 +24,6 @@
                      echo '<tr>';
                      echo '<td>'. $estudiante->get('codigo') . '</td>';
                      echo '<td>'. $estudiante->get('nombres') . ' ' . $estudiante->get('apellidos') . '</td>';
-                     echo '<td>'. $estudiante->get('edad'). '</td>';
                      echo '<td>';
                      echo  '<a href= "form_estudiantes.php?idE='. $estudiante->get('id') . '">Eliminar</a>';
                      echo '</td>';
