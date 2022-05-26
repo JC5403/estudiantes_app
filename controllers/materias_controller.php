@@ -18,7 +18,7 @@ class MateriaController implements IController
     $materias = [];
     if ($resultQuery->num_rows > 0) {
       while ($row = $resultQuery->fetch_assoc()) {
-        $materia = new materia();
+        $materia = new Materia();
         $materia->set('id', $row['id']);
         $materia->set('codigo', $row['codigo']);
         $materia->set('nombres', $row['nombres']);

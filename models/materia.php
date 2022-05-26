@@ -2,7 +2,7 @@
 
 namespace models;
 
-class Estudiante
+class Materia
 {
     protected $id;
     protected $codigo;

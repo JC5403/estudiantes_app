@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Lista de materias</h1>
-    <a href="form_estudiantes.php">Registrar nueva materia</a>
+    <a href="form_materias.php">Registrar nueva materia</a>
     <table>
         <thead>
             <tr>
@@ -18,14 +18,14 @@
         </thead>
         <tbody>
              <?php
-             $estudiantes = $estudianteController->list();
-             if (count($estudiantes) > 0){
-                 foreach($estudiantes as  $estudiante) {
+             $materias = $materiaController->list();
+             if (count($materia) > 0){
+                 foreach($materia as  $materia) {
                      echo '<tr>';
-                     echo '<td>'. $estudiante->get('codigo') . '</td>';
-                     echo '<td>'. $estudiante->get('nombres') . ' ' . $estudiante->get('apellidos') . '</td>';
+                     echo '<td>'. $materia->get('codigo') . '</td>';
+                     echo '<td>'. $materia->get('nombres') . ' ' . $materia->get('apellidos') . '</td>';
                      echo '<td>';
-                     echo  '<a href= "form_estudiantes.php?idE='. $estudiante->get('id') . '">Eliminar</a>';
+                     echo  '<a href= "form_materia.php?idE='. $materia->get('id') . '">Eliminar</a>';
                      echo '</td>';
                      echo '</tr>';
                  }

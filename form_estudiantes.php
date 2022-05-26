@@ -50,7 +50,7 @@ $estudiante = [
             <input id="CodigoInput " name="codigoInput" type="text" value="<?php echo $estudiante['codigo'] ?>" required>
         </div>
         <div>
-            <label for="nombresInput">Nombes:</label>
+            <label for="nombresInput">Nombres:</label>
             <input id="nombresInput " name="nombresInput" type="text" value="<?php echo $estudiante['nombres'] ?>" required>
         </div>
         <div>
