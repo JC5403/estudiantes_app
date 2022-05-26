@@ -36,7 +36,7 @@ $resultado = $materiaController->create($materia);
     }else {
         echo '<p>Se presento un error al guardar los datos, vuelva a intentarlo.</p>';
         echo'<br>';
-        echo '<a href="from_estudiantes.php">Volver</a>';
+        echo '<a href="from_materias.php">Volver</a>';
     }
 
 ?>

@@ -11,7 +11,7 @@ use controllers\MateriaController;
 $materiaController = new MateriaController ();
 
 $id = empty($_GET['idE']) ? null : $_GET['idE'];
-$tituloForm = empty ($id) ? "Registar "  : "modificar";
+$tituloForm = empty ($id) ? "Registrar "  : "modificar";
 $actionForm = empty ($id) ? "Registrar" : "actualizarM.php";
 
 $materiaModel = empty ($id) ? null : $materiaController->detail($id);
